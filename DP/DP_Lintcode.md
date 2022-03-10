@@ -80,3 +80,6 @@ f[0][0]=1;不是零
 //贪心：从左至右依次选择最少的花费颜色，保证不重复，但是结果不一定对少。
 ```
 
+### 512 · 解码方法
+
+[512 · 解码方法 - LintCode](https://www.lintcode.com/problem/512/description)

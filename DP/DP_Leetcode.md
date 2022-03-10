@@ -5,3 +5,7 @@
 [300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
 
 详解：[从最长递增子序列学会如何推状态转移方程 (qq.com)](https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247485269&idx=1&sn=571a6366b0b592f103971ae3e119998b&scene=21#wechat_redirect)
+
+[198. 打家劫舍](https://leetcode-cn.com/problems/house-robber/)
+
+详解：[经典动态规划：打家劫舍系列问题 (qq.com)](https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484800&idx=1&sn=1016975b9e8df0b8f6df996a5fded0af&scene=21#wechat_redirect)
