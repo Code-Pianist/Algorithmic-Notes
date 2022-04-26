@@ -20,3 +20,7 @@ water[i] = min(
 #### [19. 删除链表的倒数第 N 个结点 - 力扣](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)
 
 #### [剑指 Offer 06. 从尾到头打印链表 - 力扣](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/)
+
+#### [剑指 Offer 35. 复杂链表的复制 ](https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/)
+
+理解内容：[5张图搞懂Java引用拷贝、深拷贝、浅拷贝 ](https://segmentfault.com/a/1190000038523408)
