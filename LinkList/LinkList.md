@@ -24,3 +24,6 @@ water[i] = min(
 #### [剑指 Offer 35. 复杂链表的复制 ](https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/)
 
 理解内容：[5张图搞懂Java引用拷贝、深拷贝、浅拷贝 ](https://segmentfault.com/a/1190000038523408)
+
+#### [206. 反转链表 - 力扣](https://leetcode-cn.com/problems/reverse-linked-list/)
+
