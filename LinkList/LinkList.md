@@ -27,3 +27,6 @@ water[i] = min(
 
 #### [206. 反转链表 - 力扣](https://leetcode-cn.com/problems/reverse-linked-list/)
 
+### [25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
+
+[递归思维：k 个一组反转链表 (qq.com)](https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484597&idx=1&sn=c603f1752e33cb2701e371d84254aee2&scene=21#wechat_redirect)
