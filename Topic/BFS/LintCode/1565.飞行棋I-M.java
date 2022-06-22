@@ -187,3 +187,57 @@ public class Solution {
         return graph;
     }
 }
+
+/**
+ * 方法4：动态规划(DP)
+ * state: dp[i] 表示从 i 出发跳到终点需要最少多少步
+ * function: dp[i] = min(dp[j] + 1 or 0)
+ * j 是 i 可以跳到或者直通的点, 跳过去的话步数+1，直通的话步数 + 0
+ * initialization: dp[1..n-1] = oo, dp[n] = 0
+ * answer: dp[1]
+ */
+
+public class Solution {
+    /**
+     * @param length: the length of board
+     * @param connections: the connections of the positions
+     * @return: the minimum steps to reach the end
+     */
+    public int modernLudo(int length, int[][] connections) {
+        //1.构建连通图
+        Map<Integer,Set<Integer>> graph = buildGraph(length,connections);
+        int[] dp = new int[length+1];
+        for(int i = 1;i <= length;i++){
+            dp[i] = Integer.MAX_VALUE;
+        }
+        dp[length] = 0;
+        for(int i = length - 1;i >0;i--) {
+            int limit = Math.min(i+6,length);
+            //走一步到达点的最短路径
+            for(int j = i+1;j <= limit;j++) {
+                if(dp[j] == Integer.MAX_VALUE) {
+                    continue;
+                }
+                dp[i] = Math.min(dp[i],dp[j]+1);
+            }
+            //直接相连最短路径
+            for(int j : graph.get(i)) {
+                dp[i] = Math.min(dp[i],dp[j]);
+            }
+        }
+        return dp[1];
+    }
+    //构建连通图
+    Map<Integer,Set<Integer>> buildGraph(int length,int[][] connections){
+        Map<Integer,Set<Integer>> graph = new HashMap<>();
+        for(int i = 1;i <= length; i++){
+            graph.put(i,new HashSet<>());
+        }
+        for(int i = 0;i < connections.length;i++){
+            int from = connections[i][0];
+            int to = connections[i][1];
+            graph.get(from).add(to);
+        }
+        return graph;
+    }
+}
