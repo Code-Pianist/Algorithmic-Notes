@@ -127,3 +127,63 @@ public class Solution {
         return graph;
     }
 }
+
+/**
+ * SPFA
+ * 一个节点是否被扔进队列的判断标准发生变化：
+ * 简单图：没有访问过的点就扔进队列
+ * 复杂图：如果到达该点的路径变短了就扔进队列
+ */
+public class Solution {
+    /**
+     * @param length: the length of board
+     * @param connections: the connections of the positions
+     * @return: the minimum steps to reach the end
+     */
+    public int modernLudo(int length, int[][] connections) {
+        //1.构建连通图
+        Map<Integer,Set<Integer>> graph = buildGraph(length,connections);
+        //2.初始结点入队
+        Queue<Integer> queue = new LinkedList<>();
+        Map<Integer,Integer> distance = new HashMap<>();
+        for(int i = 1;i <= length;i++){
+            distance.put(i, Integer.MAX_VALUE);
+        }
+        queue.offer(1);
+        distance.put(1,0);
+
+        while(!queue.isEmpty()){
+            //将所有路径变短的结点重新丢入队列
+            int now = queue.poll();
+            for(int next : graph.get(now)){
+                if(distance.get(next) > distance.get(now)){
+                    distance.put(next, distance.get(now));
+                    queue.offer(next);
+                }
+            }
+
+            int limit = Math.min(now+6,length);
+            for(int next = now+1;next <= limit;next++){
+                if(distance.get(next) > distance.get(now) +1){
+                    distance.put(next,distance.get(now)+1);
+                    queue.offer(next);
+                }
+
+            }
+        }
+        return distance.get(length);
+    }
+    //构建连通图
+    Map<Integer,Set<Integer>> buildGraph(int length,int[][] connections){
+        Map<Integer,Set<Integer>> graph = new HashMap<>();
+        for(int i = 1;i <= length; i++){
+            graph.put(i,new HashSet<>());
+        }
+        for(int i = 0;i < connections.length;i++){
+            int from = connections[i][0];
+            int to = connections[i][1];
+            graph.get(from).add(to);
+        }
+        return graph;
+    }
+}
