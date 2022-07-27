@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class BinarySearch {
     /**
-     * 找出第一次出现位置，或者大于target第一个数
+     * 找出第一次出现位置，或者大于target第一个数，或者大于target的个数
      * @param arr
      * @param target
+     * @author Code_Pianist
      * @return
      */
     public static int binarySearch1(int[] arr,int target){
@@ -21,15 +22,16 @@ public class BinarySearch {
     }
 
     /**
-     * 找出最后一次出现位置，或小于target的第一个数
+     * 找出最后一次出现位置，或小于target的第一个数，或者小于target的个数
      * @param arr
      * @param target
+     * @author Code_Pianist
      * @return
      */
     public static int binarySearch2(int[] arr,int target){
         int l = 0,r = arr.length-1;
         while(l < r){
-            int mid = l+r+1 >> 1;
+            int mid = l+r+1 >> 1;//唯一注意的地方
             if(arr[mid] <= target)   l = mid;//小于等于target
             else    r = mid-1;
         }
@@ -40,6 +42,7 @@ public class BinarySearch {
     /**
      * 浮点数二分，开根号
      * @param target
+     *  @author Code_Pianist
      * @return
      */
 
