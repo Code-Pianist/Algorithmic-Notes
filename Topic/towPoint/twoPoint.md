@@ -15,3 +15,5 @@
 [剑指 Offer II 015. 字符串中的所有变位词 - 力扣（LeetCode）](https://leetcode.cn/problems/VabMRr/)
 
 [3. 无重复字符的最长子串 - 力扣（LeetCode）](https://leetcode.cn/problems/longest-substring-without-repeating-characters/)
+
+[剑指 Offer II 057. 值和下标之差都在给定的范围内 - 力扣（LeetCode）](https://leetcode.cn/problems/7WqeDu/)
